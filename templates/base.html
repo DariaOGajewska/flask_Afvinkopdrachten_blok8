@@ -5,11 +5,14 @@
   <title>Page</title>
 </head>
 <body bgcol="light_gray">
-<form method="get">
+<form method="post">
     <p><input type="text" name="search"></p>
     <p><input type="submit"></p>
-    Your search:
-    {{ search }}
+    {% autoescape off %}
+        {% for element in cursor %}
+          <p> {{element}} </p>
+        {% endfor %}
+    {% endautoescape %}
 </form>
 </body>
 </html>
