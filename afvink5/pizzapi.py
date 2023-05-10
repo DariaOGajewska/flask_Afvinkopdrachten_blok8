@@ -8,7 +8,7 @@ pizzaDB = [
             {'name': 'hawaii'}
           ]
 
-@app.route("/", methods=['GET'])
+@app.route("/api/", methods=['GET'])
 def getPizza():
     return jsonify({'pizzaDB':pizzaDB})
 
